@@ -1,5 +1,5 @@
-function dismissWelcome() {
-  document.getElementById("welcome").style.display = "none";
+function dismissGreeting() {
+  document.getElementById("greeting").style.display = "none";
 };
 
-document.getElementByID("welcome-close").addEventListener("click", dismissWelcome);
+document.getElementByID("greeting-close").addEventListener("click", dismissGreeting);
