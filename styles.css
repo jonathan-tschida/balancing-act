@@ -1,0 +1,159 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Biryani', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+main {
+  float: left;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 100px);
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 0px 30px;
+}
+
+h1 {
+  padding: 30px;
+  line-height: 40px;
+}
+
+button {
+  float: right;
+  background-color: #1CA3BA;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 6px 20px;
+}
+
+h2 {
+  float: left;
+}
+
+/* Nav */
+
+nav {
+  float: left;
+  position: relative;
+  height: 100vh;
+  width: 80px;
+  background-color: white;
+}
+
+div.nav-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img.icon {
+  width: 80px;
+  height: auto;
+  padding: 5px 20px;
+
+}
+
+img.logo {
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+/* Heading */
+
+h1 {
+  float: left;
+  width: calc(100vw - 80px);
+  height: 100px;
+}
+
+/* Greeting */
+
+#greeting {
+  width: 100%;
+  background-image: linear-gradient(to right, #8ED1DC, #E3F4F6);
+  position: relative;
+  filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.05));
+}
+
+img.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  width: auto;
+}
+
+/* Overview */
+
+#overview table {
+  border-collapse: seperate;
+  border-spacing: 10px 0px;
+  width: 100%;
+  text-align: left;
+  filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.05));
+}
+
+#overview tr {
+  background-color: white;
+}
+
+#overview th {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+#overview td {
+  font-weight: 500;
+  font-size: 18px;
+  height: 18px;
+}
+
+/* Accounts */
+
+#accounts table {
+  border-collapse: seperate;
+  border-spacing: 0px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+#accounts tr {
+  background-color: white;
+}
+
+img.icon-small {
+  height: 30px;
+  width: auto;
+}
+
+/* Recent Transactions */
+
+#recent-transactions {
+  background-color: white;
+  padding: 20px;
+}
+
+#recent-transactions table {
+  width: 100%;
+}
+
+#recent-transactions th,
+#recent-transactions td {
+  border-bottom: 1px solid #CCCCCC;
+}
