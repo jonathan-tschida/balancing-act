@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Balancing Act</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Biryani&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/images/elephant.svg" class="logo">
+      <div class="nav-options">
+        <img src="./assets/images/dashboard.svg" class="icon">
+        <img src="./assets/images/transactions.svg" class="icon">
+        <img src="./assets/images/profile.svg" class="icon">
+      </div>
+    </nav>
+    <h1>Balancing Act</h1>
+    <main>
+      <div class="column">
+        <div id="greeting">
+          <h3>Welcome, Ozzy!</h3>
+          <img src="./assets/images/close.svg" class="close" onclick="dismissWelcome();">
+        </div>
+      <section id="overview">
+        <table>
+          <tr>
+            <th>Income</th>
+            <th>Expenses</th>
+            <th>Credit Score</th>
+          </tr>
+          <tr>
+            <td>$2119.12</td>
+            <td>$420.54</td>
+            <td>673</td>
+          </tr>
+        </table>
+      </section>
+      <section id="accounts">
+        <h2>Accounts</h2>
+        <button>Manage Accounts</button>
+        <table>
+          <tr>
+            <th><img src="./assets/images/checking.svg" class="icon-small"></th>
+            <th>Wells Fargo</th>
+            <th>Checking</th>
+          </tr>
+          <tr>
+            <th><img src="./assets/images/savings.svg" class="icon-small"></th>
+            <th>Wells Fargo</th>
+            <th>Savings</th>
+          </tr>
+          <tr>
+            <th><img src="./assets/images/credit-card.svg" class="icon-small"></th>
+            <th>Amazon Credit</th>
+            <th>Credit Card</th>
+          </tr>
+          <tr>
+            <th><img src="./assets/images/credit-card.svg" class="icon-small"></th>
+            <th>Southwest Credit</th>
+            <th>Credit Card</th>
+          </tr>
+        </table>
+      </section>
+      </div>
+      <div class="column">
+        <section id="recent-transactions">
+          <h2>Recent Transactions</h2>
+          <button>New Transaction</button>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Payee</th>
+              <th>Inflow</th>
+              <th>Outflow</th>
+            </tr>
+            <tr>
+              <td>Oct 25, 2019</td>
+              <td>Target</td>
+              <td>-</td>
+              <td>$82.35</td>
+            </tr>
+            <tr>
+              <td>Oct 24, 2019</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>Oct 22, 2019</td>
+              <td>Paycheck</td>
+              <td>$1,319.12</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Oct 21, 2019</td>
+              <td>Trader Joe's</td>
+              <td>-</td>
+              <td>$54.92</td>
+            </tr>
+            <tr>
+              <td>Oct 20, 2019</td>
+              <td>Shell</td>
+              <td>-</td>
+              <td>$46.23</td>
+            </tr>
+            <tr>
+              <td>Oct 19, 2019</td>
+              <td>Rent</td>
+              <td>$800.00</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Oct 19, 2019</td>
+              <td>Hapa Sushi</td>
+              <td>-</td>
+              <td>$13.97</td>
+            </tr>
+            <tr>
+              <td>Oct 18, 2019</td>
+              <td>Pig Train</td>
+              <td>-</td>
+              <td>$4.83</td>
+            </tr>
+            <tr>
+              <td>Oct 18, 2019</td>
+              <td>RTD</td>
+              <td>-</td>
+              <td>$6.00</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
