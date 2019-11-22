@@ -1,5 +1,8 @@
-function dismissGreeting() {
-  document.getElementById("greeting").style.display = "none";
-};
+var greeting = document.getElementById('greeting');
+var closeButton = document.getElementById('greeting-close');
 
-document.getElementByID("greeting-close").addEventListener("click", dismissGreeting);
+function dismissGreeting() {
+  greeting.style.display = 'none';
+}
+
+closeButton.addEventListener('click', dismissGreeting);

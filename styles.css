@@ -21,12 +21,7 @@ main {
   float: left;
   width: 50%;
   height: 100%;
-  padding: 0px 30px;
-}
-
-h1 {
-  padding: 30px;
-  line-height: 40px;
+  padding: 0px 40px;
 }
 
 button {
@@ -35,11 +30,26 @@ button {
   color: white;
   text-transform: uppercase;
   border: none;
-  padding: 6px 20px;
+  padding: 6px 20px 2px 20px;
+  font-size: 14px;
+  border-radius: 16px;
+}
+
+button:hover {
+  font-weight: bold;
 }
 
 h2 {
   float: left;
+  font-size: 22px;
+}
+
+#greeting,
+#overview div,
+#accounts tr,
+#recent-transactions,
+button {
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .5);
 }
 
 /* Nav */
@@ -59,18 +69,23 @@ div.nav-options {
   transform: translate(-50%, -50%);
 }
 
-img.icon {
-  width: 80px;
-  height: auto;
-  padding: 5px 20px;
-
-}
-
 img.logo {
   width: 80px;
   height: auto;
   padding: 5px;
   padding-top: 10px;
+}
+
+img.icon {
+  box-sizing: content-box;
+  width: 40px;
+  height: auto;
+  padding: 5px 20px;
+}
+
+img.icon:hover {
+  border-left: 5px solid #1CA3BA;
+  padding-left: 15px;
 }
 
 /* Heading */
@@ -79,6 +94,9 @@ h1 {
   float: left;
   width: calc(100vw - 80px);
   height: 100px;
+  font-size: 28px;
+  padding: 40px;
+  line-height: 30px;
 }
 
 /* Greeting */
@@ -88,40 +106,58 @@ h1 {
   background-image: linear-gradient(to right, #8ED1DC, #E3F4F6);
   position: relative;
   filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.05));
+  margin-bottom: 25px;
+  border-radius: 3px;
 }
 
-img.close {
+#greeting h3 {
+  font-weight: normal;
+  padding: 30px;
+  font-size: 18px;
+}
+
+img#greeting-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 15px;
   height: 10px;
   width: auto;
 }
 
 /* Overview */
 
-#overview table {
-  border-collapse: seperate;
-  border-spacing: 10px 0px;
+#overview {
   width: 100%;
-  text-align: left;
-  filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.05));
+  margin-bottom: 25px;
+  overflow: visible;
 }
 
-#overview tr {
+#overview:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#overview div {
   background-color: white;
+  width: calc((100% / 3) - (50px / 3));
+  padding: 20px;
+  float: left;
+  border-radius: 3px;
 }
 
-#overview th {
+#overview div:nth-child(2) {
+  margin: 0px 25px;
+}
+
+#overview h4 {
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 10px;
 }
 
-#overview td {
-  font-weight: 500;
-  font-size: 18px;
-  height: 18px;
+#overview p {
+  font-size: 20px;
 }
 
 /* Accounts */
@@ -133,27 +169,43 @@ img.close {
   text-align: left;
 }
 
-#accounts tr {
+#accounts th {
   background-color: white;
+  font-size: 18px;
+  line-height: 18px;
+  height: 50px;
+}
+
+#accounts th:nth-child(1) {
+  border-radius: 3px 0px 0px 3px;
+}
+
+#accounts th:nth-child(3) {
+  border-radius: 0px 3px 3px 0px;
 }
 
 img.icon-small {
   height: 30px;
   width: auto;
+  margin: 15px;
 }
 
 /* Recent Transactions */
 
 #recent-transactions {
   background-color: white;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 3px;
 }
 
 #recent-transactions table {
   width: 100%;
+  text-align: left;
 }
 
-#recent-transactions th,
 #recent-transactions td {
+  font-size: 14px;
+  font-weight: bold;
+  height: 35px;
   border-bottom: 1px solid #CCCCCC;
 }

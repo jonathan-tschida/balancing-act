@@ -19,21 +19,21 @@
       <div class="column">
         <div id="greeting">
           <h3>Welcome, Ozzy!</h3>
-          <img src="./assets/images/close.svg" class="close" id="greeting-close" onclick="dismissGreeting();">
+          <img src="./assets/images/close.svg" id="greeting-close">
         </div>
       <section id="overview">
-        <table>
-          <tr>
-            <th>Income</th>
-            <th>Expenses</th>
-            <th>Credit Score</th>
-          </tr>
-          <tr>
-            <td>$2119.12</td>
-            <td>$420.54</td>
-            <td>673</td>
-          </tr>
-        </table>
+        <div>
+          <h4>Income</h4>
+          <p>$2,119.12</p>
+        </div>
+        <div>
+          <h4>Expenses</h4>
+          <p>$420.54</p>
+        </div>
+        <div>
+          <h4>Credit Score</h4>
+          <p>673</p>
+        </div>
       </section>
       <section id="accounts">
         <h2>Accounts</h2>
@@ -68,10 +68,10 @@
           <button>New Transaction</button>
           <table>
             <tr>
-              <th>Date</th>
-              <th>Payee</th>
-              <th>Inflow</th>
-              <th>Outflow</th>
+              <td>Date</td>
+              <td>Payee</td>
+              <td>Inflow</td>
+              <td>Outflow</td>
             </tr>
             <tr>
               <td>Oct 25, 2019</td>
