@@ -9,13 +9,13 @@
     <nav>
       <img src="./assets/images/elephant.svg" class="logo">
       <div class="nav-options">
-        <img src="./assets/images/dashboard.svg" class="icon">
-        <img src="./assets/images/transactions.svg" class="icon">
-        <img src="./assets/images/profile.svg" class="icon">
+        <img src="./assets/images/dashboard.svg" class="icon highlight" id="dashboard-icon" />
+        <img src="./assets/images/transactions.svg" class="icon" id="wallet-icon" />
+        <img src="./assets/images/profile.svg" class="icon" id="profile-icon" />
       </div>
     </nav>
-    <h1>Balancing Act</h1>
-    <main>
+    <main id="dashboard">
+      <h1>Balancing Act</h1>
       <div class="column">
         <div id="greeting">
           <h3>Welcome, Ozzy!</h3>
@@ -130,6 +130,154 @@
           </table>
         </section>
       </div>
+    </main>
+    <main class="hidden" id="wallet">
+      <h1>Transactions</h1>
+      <div class="column">
+        <section id="transactions">
+          <div>
+            <button>All</button>
+            <button class="deselected">Inflow</button>
+            <button class="deselected">Outflow</button>
+          </div>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Account</th>
+              <th>Payee</th>
+              <th>Inflow</th>
+              <th>Outflow</th>
+            </tr>
+            <tr>
+              <td>10-25-19</td>
+              <td>Credit Card</td>
+              <td>Target</td>
+              <td>-</td>
+              <td>$82.35</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Credit Card</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>10-22-19</td>
+              <td>Checking</td>
+              <td>Paycheck</td>
+              <td>$1319.12</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10-21-19</td>
+              <td>Credit Card</td>
+              <td>Trader Joe's</td>
+              <td>-</td>
+              <td>$54.92</td>
+            </tr>
+            <tr>
+              <td>10-20-19</td>
+              <td>Credit Card</td>
+              <td>Shell</td>
+              <td>-</td>
+              <td>$46.23</td>
+            </tr>
+            <tr>
+              <td>10-19-19</td>
+              <td>Savings</td>
+              <td>Rent</td>
+              <td>$800.00</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10-19-19</td>
+              <td>Checking</td>
+              <td>Hapa Sushi</td>
+              <td>-</td>
+              <td>$13.97</td>
+            </tr>
+            <tr>
+              <td>10-18-19</td>
+              <td>Credit Card</td>
+              <td>PigTrain</td>
+              <td>-</td>
+              <td>$4.83</td>
+            </tr>
+            <tr>
+              <td>10-18-19</td>
+              <td>Checking</td>
+              <td>RTD</td>
+              <td>-</td>
+              <td>$6.00</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Checking</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Checking</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Checking</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Checking</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+            <tr>
+              <td>10-24-19</td>
+              <td>Checking</td>
+              <td>Express</td>
+              <td>-</td>
+              <td>$212.24</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div class="column">
+        <section id="new-transaction">
+          <h2>New Transaction</h2>
+          <form>
+            <label>Type of Transaction:</label>
+            <select>
+              <option value="expense">Expense</option>
+            </select>
+            <label>Category:</label>
+            <select>
+              <option value="null">-Select One-</option>
+            </select>
+            <label>Account from:</label>
+            <select>
+              <option value="null">-Select One-</option>
+            </select>
+            <label>Payee:</label>
+            <input type="text" />
+            <label>Outflow:</label>
+            <input type="text" />
+            <label>Inflow:</label>
+            <input type="text" />
+            <input type="submit" value="Log Expense" />
+          </form>
+        </section>
+      </div>
+    </main>
+    <main class="hidden" id="profile">
+      <h1>Profile</h1>
     </main>
   </body>
   <script src="main.js"></script>

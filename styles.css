@@ -14,13 +14,17 @@ body {
 main {
   float: left;
   width: calc(100vw - 80px);
-  height: calc(100vh - 100px);
+  height: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .column {
   float: left;
   width: 50%;
-  height: 100%;
+  height: calc(100vh - 100px);
   padding: 0px 40px;
 }
 
@@ -83,7 +87,7 @@ img.icon {
   padding: 5px 20px;
 }
 
-img.icon:hover {
+.highlight {
   border-left: 5px solid #1CA3BA;
   padding-left: 15px;
 }
@@ -208,4 +212,103 @@ img.icon-small {
   font-weight: bold;
   height: 35px;
   border-bottom: 1px solid #CCCCCC;
+}
+
+/* Transactions */
+
+#transactions {
+  background-color: white;
+  padding: 30px;
+  border-radius: 3px;
+  position: relative;
+}
+
+#transactions div {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+#transactions button {
+  float: none;
+  margin-left: 1px;
+  font-size: 10px;
+  width: 100px;
+}
+
+#transactions button.deselected {
+  background-color: white;
+  border: 1px solid #1CA3BA;
+  color: #1CA3BA;
+  padding: 5px 19px 1px 19px;
+}
+
+#transactions table {
+  width: 100%;
+  text-align: left;
+}
+
+#transactions td {
+  font-size: 14px;
+  height: 35px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#transactions th {
+  font-size: 14px;
+  font-weight: bold;
+  height: 35px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* New Transaction */
+
+#new-transaction {
+  background-color: white;
+  padding: 50px;
+  border-radius: 3px;
+}
+
+#new-transaction h2 {
+  display: block;
+  float: none;
+  text-align: center;
+}
+
+#new-transaction label,
+#new-transaction select,
+#new-transaction input[type="text"] {
+  display: block;
+  width: 100%;
+}
+
+#new-transaction select {
+  border: none;
+  background-color: #F5F5F5;
+  font-size: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .5);
+}
+
+#new-transaction input[type="text"] {
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 5px;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .5);
+}
+
+#new-transaction input[type="submit"] {
+  background-color: #1CA3BA;
+  color: white;
+  border: none;
+  padding: 6px 20px 2px 20px;
+  font-size: 14px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, .5);
+}
+
+input[type="submit"]:hover {
+  font-weight: bold;
 }
