@@ -4,9 +4,14 @@ var dashboardIcon = document.getElementById('dashboard-icon');
 var walletIcon = document.getElementById('wallet-icon');
 var profileIcon = document.getElementById('profile-icon');
 var dashboard = document.getElementById('dashboard');
+var wallet = document.getElementById('wallet');
+var profile = document.getElementById('profile');
+
+wallet.parentNode.removeChild(wallet);
+profile.parentNode.removeChild(profile);
 
 function dismissGreeting() {
-  greeting.style.display = 'none';
+  greeting.parentNode.removeChild(greeting);
 }
 
 function highlightDashboard() {
@@ -27,29 +32,53 @@ function highlightProfile() {
   profileIcon.classList.add('highlight');
 }
 
-function toggleDashboard() {
+function selectDashboard() {
+  var checkWallet = document.getElementById('wallet');
+  var checkProfile = document.getElementById('profile');
   highlightDashboard();
-  dashboard.classList.remove('hidden');
-  wallet.classList.add('hidden');
-  profile.classList.add('hidden');
+  if(checkWallet !== null) {
+    wallet = document.getElementById('wallet');
+    wallet.parentNode.insertBefore(dashboard, wallet);
+    wallet.parentNode.removeChild(wallet);
+  } if(checkProfile !== null) {
+      profile = document.getElementById('profile');
+      profile.parentNode.insertBefore(dashboard, profile);
+      profile.parentNode.removeChild(profile);
+  }
 }
 
-function toggleWallet() {
+function selectWallet() {
+  var checkDashboard = document.getElementById('dashboard');
+  var checkProfile = document.getElementById('profile');
   highlightWallet();
-  dashboard.classList.add('hidden');
-  wallet.classList.remove('hidden');
-  profile.classList.add('hidden');
+  if(checkDashboard !== null) {
+    dashboard = document.getElementById('dashboard');
+    dashboard.parentNode.insertBefore(wallet, dashboard);
+    dashboard.parentNode.removeChild(dashboard);
+  } if(checkProfile !== null) {
+      profile = document.getElementById('profile');
+      profile.parentNode.insertBefore(wallet, profile);
+      profile.parentNode.removeChild(profile);
+  }
 }
 
-function toggleProfile() {
+function selectProfile() {
+  var checkDashboard = document.getElementById('dashboard');
+  var checkWallet = document.getElementById('wallet');
   highlightProfile();
-  dashboard.classList.add('hidden');
-  wallet.classList.add('hidden');
-  profile.classList.remove('hidden');
+  if(checkDashboard !== null) {
+    dashboard = document.getElementById('dashboard');
+    dashboard.parentNode.insertBefore(profile, dashboard);
+    dashboard.parentNode.removeChild(dashboard);
+  } if(checkWallet !== null) {
+      wallet = document.getElementById('wallet');
+      wallet.parentNode.insertBefore(profile, wallet);
+      wallet.parentNode.removeChild(wallet);
+  }
 }
 
 closeButton.addEventListener('click', dismissGreeting);
 
-dashboardIcon.addEventListener('click', toggleDashboard);
-walletIcon.addEventListener('click', toggleWallet);
-profileIcon.addEventListener('click', toggleProfile);
+dashboardIcon.addEventListener('click', selectDashboard);
+walletIcon.addEventListener('click', selectWallet);
+profileIcon.addEventListener('click', selectProfile);
